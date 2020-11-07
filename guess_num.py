@@ -14,5 +14,18 @@
 Тебе может понадобится модуль random, цикл while и ветвления
 """
 
-if __name__ == '__main__':
-    pass
+import random
+enigma = random.randrange(0, 1000000, 1)
+user_num = int(input('Привет! Введи число от 0 до 1 000 000.'))
+if 0 < user_num < 1000000:
+    try:
+        if user_num < enigma:
+            print('Загаданное число оказалось больше' + ' (' + str(enigma) + ')')
+        elif user_num == enigma:
+            print('Браво! Вы угадали!')
+        else:
+            print('Загаданное число оказалось меньше' + ' (' + str(enigma) + ')')
+    except(ValueErrpr, TypeError):
+        print('Ошибка! Следуй инструкциям.')
+else:
+    print('Введенное число должно быть в пределах от 0 до 1 000 000')
