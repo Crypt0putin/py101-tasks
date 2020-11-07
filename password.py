@@ -6,5 +6,14 @@
 включая цифры и алфавитные символы
 """
 
-if __name__ == '__main__':
-    pass
+while True:
+    user_passw = input('Введите пароль длиной не менее восьми символов')
+    if len(user_passw) < 8 :
+        print('Пароль слишком короткий')
+    elif not any(map(str.isdigit, user_passw)):
+        print('Пароль не содержит цифр')
+    elif user_passw.isupper() or user_passw.islower() or user_passw.isdigit():
+        print('Используйте буквы разного регистра')
+    else:
+        print('Пароль достаточно надежный')
+        break
