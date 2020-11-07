@@ -8,5 +8,12 @@
 Тебе может понадобиться цикл for и ветвления
 """
 
-if __name__ == '__main__':
-    pass
+for i in range(1, 101):
+    if i % 3 == 0 and i % 5 == 0:
+        print("Zip-Zap")
+    elif i % 3 == 0:
+        print("Zip")
+    elif i % 5 == 0:
+        print("Zap")
+    else:
+        print(i)
